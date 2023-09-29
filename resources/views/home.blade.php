@@ -15,6 +15,9 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <button type="submit" class="btn btn-primary" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">Logout</button>
                 </div>
             </div>
         </div>

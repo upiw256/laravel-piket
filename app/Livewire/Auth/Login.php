@@ -37,4 +37,9 @@ class Login extends Component
         }
         return redirect()->to(RouteServiceProvider::HOME);
     }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect(route('login'));
+    }
 }

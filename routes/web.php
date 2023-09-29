@@ -2,6 +2,7 @@
 
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
+use App\Livewire\Menu\Piket;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,10 @@ Auth::routes(['login' => false, 'register' => false]);
 route::middleware('guest')->group(function () {
     Route::get('/login', Login::class)->name('login');
     // Route::get('/register', Register::class)->name('register');
+});
+
+Route::middleware(['auth', 'auth.session'])->group(function () {
+    Route::get('/piket', Piket::class)->name('piket');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
