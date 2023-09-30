@@ -36,6 +36,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('piket') }}">Piket</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('siswa') }}">Siswa</a>
+                            </li>
                          @endguest
                     </ul>
 
